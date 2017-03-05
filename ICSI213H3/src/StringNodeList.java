@@ -1,4 +1,5 @@
 
-public class StringNodeList {
+public class StringNodeList
+{
 
 }
