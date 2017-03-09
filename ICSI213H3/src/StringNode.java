@@ -14,8 +14,15 @@ public class StringNode
 		this.previous = previous; 
 		
 	}
+	public StringNode()
+	{
+		data = "";
+		id = 0; 
+		next = null; 
+		previous = null; 
+	}
 	
-	public String getString()
+	public String getData()
 	{
 		return data; 
 	}
@@ -31,7 +38,7 @@ public class StringNode
 	{
 		return previous; 
 	}
-	public void setString(String n)
+	public void setData(String n)
 	{
 		data = n; 
 	}
@@ -41,7 +48,7 @@ public class StringNode
 	}
 	public String toString()
 	{
-		return this.getID()+ ": " + this.getString();
+		return this.getID()+ ": " + this.getData();
 	}
 
 }
