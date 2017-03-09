@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 
 public class StringNodeList
 {	
@@ -15,9 +15,9 @@ public class StringNodeList
         {
                StringNode newNode = new StringNode(n.getData(),temp,temp);
                 root = newNode;
-         }
-         else
-         {
+        }
+        else
+        {
                 StringNode currentNode = root;
                 StringNode previous = null; 
                 while(currentNode.getNext()!=null && n.getData().compareToIgnoreCase(currentNode.getData())>0)
@@ -28,9 +28,6 @@ public class StringNodeList
                 }
                 if(currentNode.getNext()!=null)
                 {
-                	/*StringNode newNode = new StringNode(n.getData(),previous,currentNode);
-                    previous.setNext(newNode);
-                    currentNode.setPrevious(n);*/
                 	StringNode newNode = new StringNode(n.getData(),temp,currentNode);
                 	currentNode.setPrevious(n);
 
@@ -64,7 +61,7 @@ public class StringNodeList
     
 		
 	}
-	 public void iterate()
+	public void traverseForward()
 	    {
 	    	StringNode currentNode = root; 
 	    	while(currentNode.getNext()!=null)
@@ -80,48 +77,4 @@ public class StringNodeList
 	 {
 		 return root;
 	 }
-	/*public void alphabetizeList()
-	{
-		StringNode temp1 = root; 
-		StringNode temp2 = temp1.getNext(); 
-		if(temp2==null)
-		{
-			return; 
-		}
-		else 
-		{
-			int i =2; 
-			StringNode temp3; 
-			while(i<=size)
-			{		
-				
-				if(temp1.getString().compareToIgnoreCase(temp2.getString()) <= 0)
-				{
-					size++;
-					temp1 = temp2; 
-					temp2 = temp2.getNext();
-					if(temp2==null)
-					{
-						return;
-					}
-				}
-				else
-				{
-					temp3 = temp2;
-					temp1 = temp2; 
-					temp2 = temp3; 
-					size++;
-				}
-				temp3=null;
-
-			}
-			
-			
-		}
-	}
-	*/
-	
-	
-	
-
 }
