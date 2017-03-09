@@ -4,12 +4,15 @@ public class StringNode
 	private String data; 
 	private int id; 
 	private StringNode next; 
+	private StringNode previous; 
 	
-	public StringNode(String data,int id)
+	public StringNode(String data,int id,StringNode previous)
 	{
 		this.data=data; 
 		this.id=id; 
 		next = null; 
+		this.previous = previous; 
+		
 	}
 	
 	public String getString()
@@ -23,6 +26,10 @@ public class StringNode
 	public StringNode getNext()
 	{
 		return next; 
+	}
+	public StringNode getPrevious()
+	{
+		return previous; 
 	}
 	public void setString(String n)
 	{
