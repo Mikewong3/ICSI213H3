@@ -98,4 +98,17 @@ public class StringNodeList
 		}
 		System.out.println(currentNode);
 	}
+	public boolean findNode(StringNode n)
+	{
+		StringNode currentNode = root; 
+		while(currentNode.getNext()!=null)
+		{
+			if(currentNode.getData().equals(n.getData()))
+			{
+				return true; 
+			}
+			currentNode = currentNode.getNext();
+		}
+		return false; 
+	}
 }

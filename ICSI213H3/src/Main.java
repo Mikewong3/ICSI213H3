@@ -9,6 +9,7 @@ public class Main
 		StringNode node3 = new StringNode("B");
 		StringNode node4 = new StringNode("e");
 		StringNode node5 = new StringNode("Z");
+		StringNode find = new StringNode("e"); 
 
 
 		
@@ -18,7 +19,9 @@ public class Main
 		list.insert(node4);
 		list.insert(node5);
 		//list.traverseForward();
-		list.traverseBackward();
+		//list.traverseBackward();
+		
+		System.out.print(list.findNode(find)); 
 
 		
 		//System.out.print(list.getRoot());
