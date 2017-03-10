@@ -5,6 +5,7 @@ public class StringNodeList
 	//Fields
 	private int size = 0; 
 	private StringNode root = null;
+	private StringNode tail = null; 
 	//private StringNode headNode; 
 	//private StringNode tailNode; 
 	//Add Method 
@@ -66,15 +67,35 @@ public class StringNodeList
 	    	StringNode currentNode = root; 
 	    	while(currentNode.getNext()!=null)
 	    	{
-	    		System.out.print(currentNode);
+	    		System.out.println(currentNode);
 	    		currentNode = currentNode.getNext();
 	    	}
-	    	System.out.print(currentNode);
+	    	System.out.println(currentNode);
 	    	
 	        
 	    }
-	 public StringNode getRoot()
+	public StringNode getRoot()
+
 	 {
 		 return root;
 	 }
+	public StringNode getTail()
+	{
+		StringNode current = root; 
+		while(current.getNext()!=null)
+		{
+			current=current.getNext();
+		}
+		return current;
+	}
+	public void traverseBackward()
+	{
+		StringNode currentNode = getTail();
+		while(currentNode.getPrevious()!=null)
+		{
+			System.out.println(currentNode);
+			currentNode = currentNode.getPrevious();
+		}
+		System.out.println(currentNode);
+	}
 }

@@ -4,11 +4,11 @@ public class Main
 	public static void main (String[]args)
 	{
 		StringNodeList list = new StringNodeList();
-		StringNode node = new StringNode("Cat");
-		StringNode node2 = new StringNode("Ate");
-		StringNode node3 = new StringNode("Bate");
-		StringNode node4 = new StringNode("eER");
-		StringNode node5 = new StringNode("Zate");
+		StringNode node = new StringNode("C");
+		StringNode node2 = new StringNode("A");
+		StringNode node3 = new StringNode("B");
+		StringNode node4 = new StringNode("e");
+		StringNode node5 = new StringNode("Z");
 
 
 		
@@ -17,7 +17,8 @@ public class Main
 		list.insert(node3);
 		list.insert(node4);
 		list.insert(node5);
-		list.traverseForward();
+		//list.traverseForward();
+		list.traverseBackward();
 
 		
 		//System.out.print(list.getRoot());
