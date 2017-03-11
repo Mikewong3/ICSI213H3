@@ -21,7 +21,9 @@ public class Main
 		//list.traverseForward();
 		//list.traverseBackward();
 		
-		System.out.print(list.findNode(find)); 
+		//System.out.print(list.findNode(find)); 
+		list.deleteNode(find);
+		list.traverseForward();
 
 		
 		//System.out.print(list.getRoot());

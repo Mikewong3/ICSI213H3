@@ -111,4 +111,28 @@ public class StringNodeList
 		}
 		return false; 
 	}
+	public void deleteNode(StringNode n)
+	{
+		StringNode currentNode = root; 
+		StringNode temp = null; 
+		while(currentNode.getNext()!=null)
+		{
+			if(currentNode.getData().equals(n.getData()))
+			{
+				if(currentNode==root)
+				{
+					root=root.getNext();
+					root.setPrevious(temp);
+					return;
+				}
+				currentNode.getNext().setPrevious(currentNode.getPrevious());
+				currentNode.getPrevious().setNext(currentNode.getNext());
+				System.out.print("The Node was deleted");
+				return;
+			}
+			currentNode = currentNode.getNext();
+		}
+		System.out.print("The Node was not found");
+		
+	}
 }
