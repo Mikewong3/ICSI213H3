@@ -127,12 +127,31 @@ public class StringNodeList
 				}
 				currentNode.getNext().setPrevious(currentNode.getPrevious());
 				currentNode.getPrevious().setNext(currentNode.getNext());
-				System.out.print("The Node was deleted");
+				System.out.println("The Node was deleted");
 				return;
 			}
 			currentNode = currentNode.getNext();
 		}
-		System.out.print("The Node was not found");
+		System.out.println("The Node was not found");
 		
 	}
+	public void deleteList()
+	{
+		StringNode currentNode = root; 
+		StringNode tail = getTail();
+		root = null;
+		tail = null; 
+		System.out.print("The List is deleted");
+		/*while(currentNode.getNext()!=null)
+		{
+			currentNode.setPrevious(temp);
+			
+			
+		}
+		currentNode.setPrevious(temp);
+		System.out.println("The list is deleted");
+		*/
+		
+	}
+	
 }
