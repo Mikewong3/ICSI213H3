@@ -8,7 +8,7 @@ public class StringNodeList
 	private StringNode tail = null; 
 	//private StringNode headNode; 
 	//private StringNode tailNode; 
-	//Add Method 
+	//insert method; adds a StringNode alphabetically to the doubly linked list
 	public void insert(StringNode n)
 	{
 		StringNode temp = null; 
@@ -62,8 +62,9 @@ public class StringNodeList
     
 		
 	}
+	//prints the doubly linked list from the beginning to the end 
 	public void traverseForward()
-	    {
+	{
 	    	StringNode currentNode = root; 
 	    	while(currentNode.getNext()!=null)
 	    	{
@@ -71,14 +72,13 @@ public class StringNodeList
 	    		currentNode = currentNode.getNext();
 	    	}
 	    	System.out.println(currentNode);
-	    	
-	        
-	    }
+	}
+	//returns the root of the doubly linked list 
 	public StringNode getRoot()
-
 	 {
 		 return root;
 	 }
+	//return the tail of the doubly linked list
 	public StringNode getTail()
 	{
 		StringNode current = root; 
@@ -88,6 +88,7 @@ public class StringNodeList
 		}
 		return current;
 	}
+	//prints the doubly linked list from the end to the beginning 
 	public void traverseBackward()
 	{
 		StringNode currentNode = getTail();
@@ -98,6 +99,7 @@ public class StringNodeList
 		}
 		System.out.println(currentNode);
 	}
+	//return a boolean statement if the parameter StringNode is found in the doubly linked list 
 	public boolean findNode(StringNode n)
 	{
 		StringNode currentNode = root; 
@@ -111,6 +113,7 @@ public class StringNodeList
 		}
 		return false; 
 	}
+	//Delete the StringNode parameter from the doubly linked list
 	public void deleteNode(StringNode n)
 	{
 		StringNode currentNode = root; 
@@ -127,6 +130,7 @@ public class StringNodeList
 				}
 				currentNode.getNext().setPrevious(currentNode.getPrevious());
 				currentNode.getPrevious().setNext(currentNode.getNext());
+				size--;
 				System.out.println("The Node was deleted");
 				return;
 			}
@@ -135,6 +139,7 @@ public class StringNodeList
 		System.out.println("The Node was not found");
 		
 	}
+	//delete the entire doubly linked list 
 	public void deleteList()
 	{
 		StringNode currentNode = root; 
@@ -142,6 +147,7 @@ public class StringNodeList
 		root = null;
 		tail = null; 
 		System.out.print("The List is deleted");
+		size=0; 
 		/*while(currentNode.getNext()!=null)
 		{
 			currentNode.setPrevious(temp);
@@ -153,5 +159,9 @@ public class StringNodeList
 		*/
 		
 	}
-	
+	//return size of the doubly linked list 
+	public int getSize()
+	{
+		return size; 
+	}
 }
